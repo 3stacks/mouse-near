@@ -8,8 +8,7 @@ import throttle from 'lodash/throttle';
  */
 export default function(target, callback, options = {}) {
     const element = parseElement(target);
-    const elementRect = element.getBoundingClientRect();
-    const elementBounds = calculateElementBounds(elementRect, options);
+    const elementBounds = calculateElementBounds(element.getBoundingClientRect(), options);
     const eventCallback = throttle(function(event) {
         if (isMouseInRange(event, elementBounds)) {
             callback();
@@ -22,15 +21,16 @@ export default function(target, callback, options = {}) {
 }
 
 function calculateElementBounds(elementRect, options) {
-    const buffer = options.buffer || 0;
-    if (isNaN(buffer)) {
-        throw new TypeError('options.buffer was expecting a number, was given: ' + typeof options.buffer);
+    console.log(elementRect);
+    const distance = options.distance || 0;
+    if (isNaN(distance)) {
+        throw new TypeError('options.distance was expecting a number, was given: ' + typeof options.distance);
     } else {
         return {
-            top: elementRect.top - buffer,
-            bottom: elementRect.bottom + buffer,
-            left: elementRect.left - buffer,
-            right: elementRect.right + buffer
+            top: elementRect.top - distance,
+            bottom: elementRect.bottom + distance,
+            left: elementRect.left - distance,
+            right: elementRect.right + distance
         }
     }
 }
