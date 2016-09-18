@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+}
+
+#root {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.top {
+	width: 100vw;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+p {
+	width: 250px;
+	text-align: center;
+}
+
+.el {
+	background-color: red;
+	color: white;
+	font-size: 2rem;
+	width: 250px;
+	height: 250px;
+}
+
+.el.active {
+	background-color: green;
+}

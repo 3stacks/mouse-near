@@ -1,4 +1,4 @@
-import mouseNear from '../src/index';
+import mouseNear from '../../../index';
 
 window.addEventListener('load', function() {
     mouseNear('.element-1', () => {
