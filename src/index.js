@@ -21,7 +21,6 @@ export default function(target, callback, options = {}) {
 }
 
 function calculateElementBounds(elementRect, options) {
-    console.log(elementRect);
     const distance = options.distance || 0;
     if (isNaN(distance)) {
         throw new TypeError('options.distance was expecting a number, was given: ' + typeof options.distance);
