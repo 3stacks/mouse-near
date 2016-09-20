@@ -12,6 +12,20 @@ mouseNear('.element-1', () => {
 
 See the demo [mouse-near.3stacks.me](mouse-near.3stacks.me).
 
+### Parameters
+
+| Argument | Type | Example |
+| ------ | ----- | ------ |
+| element | HTMLElement OR querySelector String | document.querySelector('#element'); |
+| callback | Function | (event) => { console.log(event) }
+| options | Object | { distance: 40 } |
+
+#### Options
+
+Currently supported options
+
+- distance - The amount in pixels to trigger outside the bounds of the selected element/
+
 ## Known Issues
 
 mouse-near depends on `element.getBoundingClientRect()`, so positioning styles must be applied before 
