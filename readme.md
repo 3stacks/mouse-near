@@ -1,3 +1,9 @@
+# mouse-near 
+
+[![Build Status](https://travis-ci.org/3stacks/mouse-near.svg?branch=master)](https://travis-ci.org/3stacks/mouse-near)
+
+Detect when the mouse is near/on an element of your choosing and trigger a callback.
+
 ## Usage
 
 - `npm install @lukeboyle/mouse-near`
