@@ -1,6 +1,6 @@
 {
   "name": "@lukeboyle/mouse-near",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Trigger a callback when the mouse is near an element",
   "main": "index.js",
   "jsnext:main": "src/main.js",
